@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https;//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Better Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plaster&family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <header>
+        <ul>
+            <li class="logo"><a href="">BETTER CONVERTER</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">NEWS</a></li>
+            <li><a href="">SUPPORT ❤️</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="title">
+                <h1>Better Converter</h1>
+                <span>mp3</span>
+            </div>
+            <div class="input-box">
+                <p>Here you can enter a link to the video that u want to download (just mp3 format for now).</p>
+                <form th:action="@{/get-link}" th:object="${newLink}" method="post">
+                    <input type="text" th:field="*{value}">
+                    <input type="submit" value="DOWNLOAD SONG">
+                </form>
+            </div>
+        </section>
+        <section id="about">
+            <div class="about-convainer">
+                <h2>Thanks for using this site :)</h2>
+                <p>
+                    If you like this site, please consider donating.
+                    This site is costing money to be up and at the 
+                    same time it is not generating any money.
+                    <br>
+                    So if you like this site please consider donating
+                    to keep it up and running :).
+                </p>
+            </div>    
+        </section>
+    </main>
+    <footer>
+        <span class="logo">BETTER CONVERTER</span>
+        <span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+            Eaque incidunt, illo magni cum expedita dicta molestias 
+            recusandae ducimus non.
+        </span>
+    </footer>
+</body>
+</html>

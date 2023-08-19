@@ -1,0 +1,165 @@
+:root {
+    --main-color-dark: #10172c;
+    --main-color-light: #e2e2e2;
+    --main-color-yellow: #F1CF71;
+    --main-color-blue: #1f80db;
+}  
+html {
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0px;
+        header {
+            font-weight: 500;
+            font-size: 1.25rem;
+            background-color: var(--main-color-dark);
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+            a:hover {
+                color: #cccccc;
+            }
+            ul {
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                gap: 3rem;
+                .logo {
+                    font-family: 'Plaster', cursive;
+                }
+                li {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        main {
+            #hero {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 8rem;
+                background-color: var(--main-color-light);
+                height: 100vh;
+                text-align: center;
+                .title {
+                    display: flex;
+                    align-items: flex-end;
+                    position: relative;
+                    left: 25px;
+                    h1 {
+                        color: var(--main-color-dark);
+                        font-family: 'Plaster', cursive;
+                        margin: 0px;
+                        font-size: 5rem;
+                        letter-spacing: -6px;
+                    }
+                    span {
+                        position: relative;
+                        left: -60px;
+                        bottom: -20px;
+                        color: var(--main-color-blue);
+                        font-size: 3rem;
+                        font-weight: 700;
+                        letter-spacing: 2px;
+                    }
+                }
+                .input-box {
+                    background-color: var(--main-color-dark);
+                    color: white;
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    padding: 2.5rem;
+                    border-radius: 50px;
+                    height: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 2rem;
+                    p {
+                        margin: 0px;
+                    }
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2rem;
+                        input {
+                            width: 100%;
+                            border-radius: 10px;
+                            padding: .5rem .5rem;
+                            border: none;
+                        }
+                        input[type="submit"] {
+                            border-radius: 16px;
+                            width: max-content;
+                            padding: .8rem;
+                            font-weight: 900;
+                            font-size: 1.4rem;
+                            border: 5px solid var(--main-color-blue);
+                            background-color: var(--main-color-blue);
+                            color: var(--main-color-light);
+                        }
+                        input[type="submit"]:hover {
+                            background-color: var(--main-color-dark);
+                        }
+                    }
+                }
+            }
+            #about {
+                height: 300px;
+                background: linear-gradient(300deg, #10172c, #ff4c68, #ef8172);
+                background-size: 180% 180%;
+                animation: gradient-animation 24s ease infinite;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                .about-convainer {
+                    color: white;
+                    font-size: 1.2rem;
+                    font-weight: bolder;
+                    max-width: 1200px;
+                    h2 {
+                        margin: 0px 0px 1.2rem 0px;
+                    }
+                    p {
+                        margin: 0px;
+                    }
+                }
+            }
+        }
+        footer {
+            display: flex;
+            gap: 6rem;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 180px;
+            font-size: 1.1rem;
+            background-color: var(--main-color-dark);
+            color: white;
+            .logo {
+                font-family: 'Plaster', cursive;
+            }
+        }
+    }
+}
+
+  
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
