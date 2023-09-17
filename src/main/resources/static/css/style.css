@@ -98,10 +98,8 @@ html body main #hero .input-box form input {
   padding: 0.5rem 0.5rem;
   border: none;
 }
-html body main #hero .input-box form input[type=submit] {
+html body main #hero .input-box form .button {
   border-radius: 16px;
-  width: -moz-max-content;
-  width: max-content;
   padding: 0.8rem;
   font-weight: 900;
   font-size: 1.4rem;
@@ -109,7 +107,7 @@ html body main #hero .input-box form input[type=submit] {
   background-color: var(--main-color-blue);
   color: var(--main-color-light);
 }
-html body main #hero .input-box form input[type=submit]:hover {
+html body main #hero .input-box form .button:hover {
   background-color: var(--main-color-dark);
 }
 html body main #about {
@@ -147,6 +145,10 @@ html body footer {
 }
 html body footer .logo {
   font-family: "Plaster", cursive;
+}
+
+#converting-text {
+  display: none;
 }
 
 @keyframes gradient-animation {

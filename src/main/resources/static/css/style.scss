@@ -95,9 +95,8 @@ html {
                             padding: .5rem .5rem;
                             border: none;
                         }
-                        input[type="submit"] {
+                        .button {
                             border-radius: 16px;
-                            width: max-content;
                             padding: .8rem;
                             font-weight: 900;
                             font-size: 1.4rem;
@@ -105,7 +104,7 @@ html {
                             background-color: var(--main-color-blue);
                             color: var(--main-color-light);
                         }
-                        input[type="submit"]:hover {
+                        .button:hover {
                             background-color: var(--main-color-dark);
                         }
                     }
@@ -151,6 +150,9 @@ html {
     }
 }
 
+#converting-text {
+    display: none;
+}
   
 @keyframes gradient-animation {
     0% {
