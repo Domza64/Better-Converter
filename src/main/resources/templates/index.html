@@ -30,8 +30,18 @@
                     <span>Link field cannot be empty!</span>
                 </div>
                 <form id="convert-form" th:action="@{/process-link}" th:object="${linkDto}" method="post">
-                    <input type="text" th:field="*{linkString}" placeholder="Paste video link here.">
-                    <span class="button" onclick="convert()">Convert</span>
+                    <div style="display: flex; width: 100%;">
+                        <input type="text" th:field="*{linkString}" placeholder="Paste video link here.">
+                        <span class="button" onclick="convert()">Convert</span>
+                    </div>
+                    <div th:if="${param.download}">
+                        <a class="button" id="download-button" href="/" download>Download</a>
+                        <script type="text/javascript">
+                            const urlParams = new URLSearchParams(window.location.search);
+                            var id = urlParams.get('download');
+                            document.getElementById('download-button').setAttribute('href', '/download?id=' + id);
+                        </script>
+                    </div>
                 </form>
                 <span id="converting-text">Converting...</span>
             </div>
