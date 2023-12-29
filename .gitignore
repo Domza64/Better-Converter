@@ -29,8 +29,6 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-tempDownloads/
-
 ### VS Code ###
 .vscode/
 
@@ -50,3 +48,4 @@ buildNumber.properties
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+
