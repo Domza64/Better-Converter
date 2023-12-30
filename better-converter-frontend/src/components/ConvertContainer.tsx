@@ -47,6 +47,7 @@ function ConvertContainer() {
       {err && <span>Err converting video</span>}
       {downloadUrl ? (
         <>
+          <span>Reqdy for download: {filename}</span>
           <button onClick={handleDownloadButton}>Download</button>
           <button onClick={handleConvertNext}>Convert Next</button>
         </>

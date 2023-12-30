@@ -1,6 +1,7 @@
 export const getID = (videoLink: string) => {
-    // TODO - Actually extract id from link
-    return videoLink;
+    const videoId = videoLink.split('v=')[1]?.split('&')[0];
+
+    return videoId;
 }
 
 export const download = (downloadUrl: string, filename: string) => {

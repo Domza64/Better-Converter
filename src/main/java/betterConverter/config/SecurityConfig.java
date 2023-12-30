@@ -17,9 +17,8 @@ public class SecurityConfig {
         http
                 .cors(corsCustomizer -> corsCustomizer.configurationSource(request -> {
                     CorsConfiguration config = new CorsConfiguration();
-                    config.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://192.168.1.25:5173"));
+                    config.setAllowedOrigins(Collections.singletonList("*")); // TODO - don't allow all origins?
                     config.setAllowedMethods(Collections.singletonList("*"));
-                    config.setAllowCredentials(true);
                     config.setAllowedHeaders(Collections.singletonList("*"));
                     config.setMaxAge(3600L);
                     config.setExposedHeaders(Collections.singletonList("X-Filename"));

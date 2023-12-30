@@ -1,6 +1,6 @@
 package betterConverter.controller;
 
-import betterConverter.converterUtils.VideoDownloader;
+import betterConverter.utils.ConverterUtils;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -16,7 +16,7 @@ public class ConverterController {
 
     @GetMapping("/getVideo")
     public ResponseEntity<Resource> getVideo(@RequestParam String id, @RequestParam String type) {
-        File file = VideoDownloader.downloadSong(id, type);
+        File file = ConverterUtils.downloadSong(id, type);
         assert file != null;
         Resource resource = new FileSystemResource(file);
 
