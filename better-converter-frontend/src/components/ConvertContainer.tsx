@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ConvertForm from "./ConvertForm";
 import { download } from "../utils/Utils";
+import "./convert-container.css";
 
 function ConvertContainer() {
   const [err, setErr] = useState(false);
@@ -43,14 +44,15 @@ function ConvertContainer() {
 
   return (
     <>
-      <h2>Converter Container</h2>
       {err && <span>Err converting video</span>}
       {downloadUrl ? (
-        <>
-          <span>Reqdy for download: {filename}</span>
-          <button onClick={handleDownloadButton}>Download</button>
-          <button onClick={handleConvertNext}>Convert Next</button>
-        </>
+        <div className="download-ready">
+          <span>Ready for download: {filename}</span>
+          <div>
+            <button onClick={handleDownloadButton}>Download</button>
+            <button onClick={handleConvertNext}>Convert Next</button>
+          </div>
+        </div>
       ) : converting ? (
         <span>Converting...</span>
       ) : (

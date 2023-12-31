@@ -1,6 +1,7 @@
 import { FormEvent, useState } from "react";
 import { getID } from "../utils/Utils";
 import axios, { GET_VIDEO } from "../constants/Api";
+import "./converter-form.css";
 
 interface Props {
   convertFinished: (url: string, filename: string) => void;
@@ -60,8 +61,8 @@ function ConvertForm({
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label>
-          Video link:
+        <label className="link-input">
+          Paste link to video here
           <input
             type="text"
             value={videoLink}
@@ -70,23 +71,26 @@ function ConvertForm({
           />
         </label>
 
-        <label>
-          mp3
-          <input
-            type="checkbox"
-            checked={checkbox3}
-            onChange={() => handleCheckboxChange("mp3")}
-          />
-        </label>
+        <div className="format-selection">
+          <label>
+            mp3
+            <input
+              type="checkbox"
+              checked={checkbox3}
+              onChange={() => handleCheckboxChange("mp3")}
+            />
+          </label>
 
-        <label>
-          mp4
-          <input
-            type="checkbox"
-            checked={checkbox4}
-            onChange={() => handleCheckboxChange("mp4")}
-          />
-        </label>
+          <label>
+            mp4
+            <input
+              type="checkbox"
+              checked={checkbox4}
+              onChange={() => handleCheckboxChange("mp4")}
+            />
+          </label>
+        </div>
+
         <button type="submit">Convert</button>
       </form>
     </div>

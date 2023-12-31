@@ -1,5 +1,8 @@
 export const getID = (videoLink: string) => {
-    const videoId = videoLink.split('v=')[1]?.split('&')[0];
+    var videoId = videoLink.split('v=')[1]?.split('&')[0];
+    if (videoId === undefined) {
+        videoId = videoLink.split('youtu.be/')[1]?.split('?')[0];
+    }
 
     return videoId;
 }

@@ -1,0 +1,11 @@
+.download-ready {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.download-ready > div {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
