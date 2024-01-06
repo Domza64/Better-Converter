@@ -1,3 +1,8 @@
+.converter-container {
+    max-width: 750px;
+    width: 100%;
+}
+
 .download-ready {
     display: flex;
     flex-direction: column;

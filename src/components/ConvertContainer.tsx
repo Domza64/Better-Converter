@@ -43,7 +43,7 @@ function ConvertContainer() {
   };
 
   return (
-    <>
+    <div className="converter-container">
       {err && <span>Err converting video</span>}
       {downloadUrl ? (
         <div className="download-ready">
@@ -62,7 +62,7 @@ function ConvertContainer() {
           startConverting={startConverting}
         />
       )}
-    </>
+    </div>
   );
 }
 

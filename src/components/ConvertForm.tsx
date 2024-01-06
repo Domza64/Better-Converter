@@ -61,15 +61,14 @@ function ConvertForm({
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label className="link-input">
-          Paste link to video here
-          <input
-            type="text"
-            value={videoLink}
-            required
-            onChange={(e) => setVideoLink(e.target.value)}
-          />
-        </label>
+        <input
+          className="link-input"
+          placeholder="Paste link to video here"
+          type="text"
+          value={videoLink}
+          required
+          onChange={(e) => setVideoLink(e.target.value)}
+        />
 
         <div className="format-selection">
           <label>
